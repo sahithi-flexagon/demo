@@ -1,0 +1,43 @@
+# To get started type 'test-' and select the template you want to use.
+# YAML uses backslash as its escape character and eats the first layer of quote marks.
+# Use Double Quotes around values containing '$' or '{'.
+
+# To reference a property, use this syntax: 
+# without groovy - value: "${PROPERTY_CODE}"
+#    with groovy - value: "PROPERTY_CODE" 
+
+# To reference a secure property on the deploy target group and hide the value from the UI, use this syntax: 
+# without groovy - value: "\\$${FD_INSTANCE_CODE}_PROPERTY_CODE"
+---
+testName: Postman Test
+description: Generated Postman Test
+# Optionally apply filters to control when this test executes
+# The filter below would only execute this test if the deploy target environment code is DEV 
+# filters: 
+#  - type: env
+#    value: DEV
+workflow:
+  name: Postman-runCollection
+  inputs:
+    # This example is a regex expression to match all collection.json files in fdtests folder of the artifacts folder.
+    - code: FDPMN_COLLECTION_FILE
+      value: C://Postman//6.0.user.postman_collection.json
+    # Path to Postman Environment file (e.g. /home/postman/dev.postman_environment.json) (String)
+    - code: FDPMN_ENVIRONMENT_FILE
+      value: 
+    # Foldername to run tests within a Collection.(e.g. test) (String)
+    - code: FOLDERNAME_IN_COLLECTION
+      value:
+    # Number of iterations to run the collection.(e.g. any value must be > 0) (Integer)
+    - code: FDPMN_TEST_ITERATIONS
+      value:
+    # Misc Options to run the collection.If more than 1 options separate them by space(e.g. --bail -k --insecure -x --silent etc) (String)
+    - code: FDPMN_MISC_CMD_OPTIONS
+      value:
+    # the test instance code you want to execute on
+    - code: TEST_INSTANCE
+      value: TESTAUTOMATIONSAMPLE3
+
+  
+
+
