@@ -30,7 +30,7 @@ public class xxPersonDetailsEOImpl extends OAEntityImpl
 
   /**
    * 
-   * This is the default constructor (do not remove)
+   * This is the default constructor (do not remove).
    */
   public xxPersonDetailsEOImpl()
   {
