@@ -1,4 +1,4 @@
-# Use the Essbase.pm module. This statement is required to use Essbase within a Perl script. 
+# Use the Essbase.pm module. This statement is required to use Essbase within a Perl script..
 use Essbase; 
  
 # Create a handle to the Essbase Server by connecting as admin, mypassword to the local machine. 
