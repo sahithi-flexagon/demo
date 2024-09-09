@@ -1,1 +1,3 @@
-select * from abcd;
+set serveroutput on
+exec display_line
+/
